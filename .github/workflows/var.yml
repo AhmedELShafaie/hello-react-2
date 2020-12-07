@@ -16,4 +16,4 @@ jobs:
           echo ${{ secrets.GITHUB_TOKEN }}
           echo ${{ github.ref }}
           echo ${GITHUB_REF}'-------------'${GITHUB_WORKFLOW}
-          echo ${{ secerts.SSH_KEY }}
+          echo ${{ secrets.SSH_KEY }}
