@@ -15,4 +15,4 @@ jobs:
           echo ${{ github.repository }}
           echo ${{ secrets.GITHUB_TOKEN }}
           echo ${{ github.ref }}
-          echo ${GITHUB_REF}
+          echo ${GITHUB_REF}'-------------'${GITHUB_WORKFLOW}
