@@ -1,0 +1,17 @@
+name: Echo Variables
+
+on:
+  push:
+    branches: [ deploy ]
+  pull_request:
+    branches: [ deploy, master ]
+jobs:
+  print-var:
+    name: print GITHUB Variables
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo variables
+        run: |
+          echo ${{ github.repository }}
+          echo ${{ secrets.GITHUB_TOKEN }}
+          echo ${{ GITHUB_ACTION}}
