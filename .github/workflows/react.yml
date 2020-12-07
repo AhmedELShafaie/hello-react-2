@@ -10,6 +10,15 @@ on:
     branches: [ deploy, master ]
 
 jobs:
+  super_lint: 
+    name: run lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+      - name: lint
+        uses: github/super-linter@v3
+        
   build:
 
     runs-on: ubuntu-latest
