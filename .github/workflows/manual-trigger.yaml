@@ -10,4 +10,5 @@ jobs:
        - name: ls  
          run: |
            ls 
-           
+           pwd 
+           uname 
