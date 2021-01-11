@@ -8,18 +8,25 @@ jobs:
     runs-on: ubuntu-latest
     name: npm install 
     steps: 
-     - uses: actions/checkout@v2 
+
+
+     - name: Checkout code 
+       uses: actions/checkout@v2 
        with:
         depth: 1
 
-     - uses: actions/setup-node@v2
+     - name: setup node enviroment
+       uses: actions/setup-node@v2
        with:
         node-version: '14'
+
+    
+     - name: Build and test
        run: |
         npm install
         npm test
         pwd 
-        
+        ls -l 
 
 
 
