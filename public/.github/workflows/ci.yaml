@@ -1,0 +1,25 @@
+name: CI 
+on:
+  push: 
+  pull_request:
+    
+jobs:
+  job_ci:
+    runs-on: ubuntu-latest
+    name: npm install 
+    steps: 
+     - uses: actions/checkout@v2 
+       with:
+        depth: 1
+
+     - uses: actions/setup-node@v2
+       with:
+        node-version: '14'
+       run: |
+        npm install
+        npm test
+        pwd 
+        
+
+
+
