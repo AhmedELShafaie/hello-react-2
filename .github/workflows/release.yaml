@@ -4,16 +4,13 @@ on:
     branches:
       - "main"
       #- DO-RUN-NOW
-      
 
-  pull_request:
-    branches:
-      #- "main"
-      - DO-RUN-NOW
 
-  jobs:
-    create_release:
+jobs:
+  create_release:
     name: Create a Release
+    runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
